@@ -1,7 +1,6 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
-#include <map>
 #include <vector>
 
 int main(int argc, char* argv[])
@@ -22,11 +21,10 @@ int main(int argc, char* argv[])
     std::sort(second_list.begin(), second_list.end());
 
     int sum = 0;
-
-    for(int i = 0; i <first_list.size(); ++i)
+    for(std::size_t i = 0; i <first_list.size(); ++i)
     {
         int amount = 0;
-        for(int j = 0; second_list[j] < first_list[i]+1; ++j)
+        for(std::size_t j = 0; second_list[j] < first_list[i]+1; ++j)
         {
             if(first_list[i] == second_list[j])
                 ++amount;
